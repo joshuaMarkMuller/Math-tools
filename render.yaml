@@ -1,0 +1,12 @@
+# Render Blueprint — deploys the toolkit as a free static site.
+# In Render: New > Blueprint, then pick this repository.
+services:
+  - type: web
+    name: year9-maths-toolkit
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./public
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
